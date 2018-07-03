@@ -20,13 +20,17 @@
 //                 $user->create();
 
 
-                 $user =User::find_user_by_id(2);
-                 $user->username="what ever";
-                 $user->save();
+//                 $user =User::find_user_by_id(2);
+//                 $user->username="what ever";
+//                 $user->save();
 
 
 
 
+
+                               $user =new User;
+                               $user->username="helloworld";
+                               $user->save();
 
 
 
