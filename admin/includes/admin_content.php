@@ -20,7 +20,11 @@
 //                 $user->create();
 
 
-             
+                 $user =User::find_user_by_id(2);
+                 $user->username="what ever";
+                 $user->save();
+
+
 
 
 
