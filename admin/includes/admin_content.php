@@ -10,27 +10,14 @@
 			</h1>
                  <?php
 
-//                 $user=new User();
-//
-//                 $user->username="suave the second";
-//                 $user->password="rico last name";
-//                 $user->first_name="dhanushka";
-//                 $user->last_name="gayan jayaweera";
-//
-//                 $user->create();
 
-
-//                 $user =User::find_user_by_id(2);
-//                 $user->username="what ever";
-//                 $user->save();
+                 $user=User::find_user_by_id(21);
+                 $user->delete();
 
 
 
 
 
-                               $user =new User;
-                               $user->username="helloworld";
-                               $user->save();
 
 
 
