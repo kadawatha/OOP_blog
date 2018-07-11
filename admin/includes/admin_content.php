@@ -10,13 +10,13 @@
 			</h1>
                  <?php
 
+                 $user=new User();
+                 $user->username="dhanushka";
+                 $user->password=5555555;
+                 $user->first_name="haloja";
+                 $user->last_name="lastword";
 
-                 $user=User::find_user_by_id(21);
-                 $user->delete();
-
-
-
-
+                 $user->create();
 
 
 
