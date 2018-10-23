@@ -8,15 +8,29 @@
 				Admin
 				<small>Subheading</small>
 			</h1>
+
+
+
+
+
+
                  <?php
+                 
+//                 $user=new User();
+//                 $user->username="dhanushka";
+//                 $user->password=5555555;
+//                 $user->first_name="haloja";
+//                 $user->last_name="lastword";
+//
+//                 $user->create();
 
-                 $user=new User();
-                 $user->username="dhanushka";
-                 $user->password=5555555;
-                 $user->first_name="haloja";
-                 $user->last_name="lastword";
 
-                 $user->create();
+                $users=User::find_all(1);
+                foreach ($users as $user){
+                    echo $user->username="dhanushka";
+                    $user->save();
+                }
+
 
 
 
