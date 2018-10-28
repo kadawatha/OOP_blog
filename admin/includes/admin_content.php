@@ -16,21 +16,23 @@
 
                  <?php
                  
-//                 $user=new User();
-//                 $user->username="dhanushka";
-//                 $user->password=5555555;
-//                 $user->first_name="haloja";
-//                 $user->last_name="lastword";
+//                 $photo=new Photo();
+//                 $photo->title="title tile title goes here";
+//                 $photo->description="description description goes here";
+//                 $photo->filename="gayan.jpg";
+//                 $photo->size=41;
 //
-//                 $user->create();
+//
+//                 $photo->create();
 
 
-                $users=User::find_all(1);
-                foreach ($users as $user){
-                    echo $user->username="dhanushka";
-                    $user->save();
-                }
-
+//                $photos=Photo::find_all();
+//                foreach ($photos as $photo){
+//                  echo $photo->title;
+//                  echo "</br>";
+//                    echo $photo->description;
+//                }
+//
 
 
 

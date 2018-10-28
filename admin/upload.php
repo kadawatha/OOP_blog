@@ -10,7 +10,55 @@
 <?php include("includes/side_nav.php") ?>
 
 <!-- /.navbar-collapse -->
+
+<?php
+
+
+if(!$session->is_signed_in()){redirect("login.php");}
+
+
+?>
+
+
+
+
 </nav>
+
+
+
+
+
+<?php
+
+$message="";
+
+if (isset($_POST['submit'])){
+
+    $photo=new Photo();
+    $photo->title=$_POST['title'];
+    $photo->set_file($_FILES['file_upload']);
+
+
+    if ($photo->save()){
+        $message="uploaded success fully";
+    }else{
+        $message=join("<br>",$photo->errors);
+    }
+
+
+
+}
+
+
+
+
+?>
+
+
+
+
+
+
 
 
 <div id="page-wrapper">
@@ -26,14 +74,35 @@
 				Upload
 					<small>Subheading</small>
 				</h1>
-				<ol class="breadcrumb">
-					<li>
-						<i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
-					</li>
-					<li class="active">
-						<i class="fa fa-file"></i> Blank Page
-					</li>
-				</ol>
+
+
+
+
+
+                <div class="col-md-6">
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+
+
+                    <div class="form-group">
+                        <input type="text" name="title" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="file" name="file_upload">
+                    </div>
+
+
+                    <input  type="submit" class="btn btn-warning" name="submit">
+                    
+                    
+                </form>
+                </div>
+
+
+
+
+
+
 			</div>
 		</div>
 		<!-- /.row -->
